@@ -1,5 +1,7 @@
 
-# add vars in dockerfile context ARG
+# add vars in dockerfile context ARG]
+# ARG name
+
 FROM ubuntu:24.04
 
 RUN echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf.d/00-docker
@@ -17,7 +19,9 @@ RUN apt install -y python3 \
     git \
     build-essential \
     libssl-dev \
-    libffi-dev 
+    libffi-dev \
+    wget \
+    curl
 
 RUN apt install -y nodejs npm
 
